@@ -7,11 +7,13 @@ find_package(ament_cmake_python REQUIRED)
 install(FILES scripts/completion.bash DESTINATION share/${PROJECT_NAME}/environment)
 
 # install xacro python package and it's console_script entry-point script
-ament_python_install_package(${PROJECT_NAME} SCRIPTS_DESTINATION lib/${PROJECT_NAME})
+# ament_python_install_package(${PROJECT_NAME} SCRIPTS_DESTINATION lib/${PROJECT_NAME})
+ament_python_install_package(${PROJECT_NAME})
 
 # install entry-point script(s) in bin as well
+# DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/ament_cmake_python/${PROJECT_NAME}/scripts/
 install(
-    DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/ament_cmake_python/${PROJECT_NAME}/scripts/
+    DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/scripts/
     DESTINATION bin/
     USE_SOURCE_PERMISSIONS)
 
