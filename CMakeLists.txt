@@ -13,7 +13,7 @@ ament_python_install_package(${PROJECT_NAME})
 # install entry-point script(s) in bin as well
 # DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/ament_cmake_python/${PROJECT_NAME}/scripts/
 install(
-    DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/xacro/
+    DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
     DESTINATION bin/
     USE_SOURCE_PERMISSIONS)
 
